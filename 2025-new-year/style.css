@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #222;
+}
+
+h2 {
+  position: relative;
+  top: 20px;
+  font-size: 3em;
+  color: #fff;
+  line-height: 1.25em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 span {
+  font-size: 4.5em;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.spark {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.spark span {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  pointer-events: none;
+  overflow: hidden;
+  transform-origin: bottom;
+}
+
+.spark span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0f0;
+  animation: animate 2s ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-101%);
+  }
+}
